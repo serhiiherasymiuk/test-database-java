@@ -14,7 +14,7 @@ public class HibernateUtil {
             configuration.addAnnotatedClass(User.class);
             return configuration.buildSessionFactory();
         } catch(Throwable ex) {
-            System.out.println("Проблема підключення до БД");
+            System.out.println("Database connection error");
             throw new ExceptionInInitializerError(ex);
         }
     }
