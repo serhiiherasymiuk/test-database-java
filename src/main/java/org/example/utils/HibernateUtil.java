@@ -1,11 +1,13 @@
 package org.example.utils;
 
+import lombok.Getter;
 import org.example.entities.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 
 public class HibernateUtil {
+    @Getter
     private static final SessionFactory sesseionFactory = buildSessionFactory();
 
     private static SessionFactory buildSessionFactory() {
@@ -19,7 +21,4 @@ public class HibernateUtil {
         }
     }
 
-    public static SessionFactory getSesseionFactory() {
-        return sesseionFactory;
-    }
 }
